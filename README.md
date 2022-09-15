@@ -8,6 +8,17 @@ Setup the webhook connector in Teams for the channel where you want alerts poste
 
 Edit the webhookUrl in run&#46;sh to test your webhook to Teams. 
 
+## Alert Script
+
+Copy the custom-teams and custom-teams&#46;py file to /var/ossec/integrations/
+Use the following commands to allow Wazuh to execute the file.
+```
+chmod 750 /var/ossec/integrations/custom-teams
+chown root:wazuh /var/ossec/integrations/custom-teams
+chmod 750 /var/ossec/integrations/custom-teams.py
+chown root:wazuh /var/ossec/integrations/custom-teams.py
+```
+
 ## ossec.conf Configuration
 
 Add the following integration configuration to ossec.conf via the web UI or
@@ -29,17 +40,6 @@ link for all options. It is important the integration name starts with
 ```
 
 Make sure you save the configuration and use the Restart Manager button.
-
-## Alert Script
-
-Copy the custom-teams and custom-teams&#46;py file to /var/ossec/integrations/
-Use the following commands to allow Wazuh to execute the file.
-```
-chmod 750 /var/ossec/integrations/custom-teams
-chown root:wazuh /var/ossec/integrations/custom-teams
-chmod 750 /var/ossec/integrations/custom-teams.py
-chown root:wazuh /var/ossec/integrations/custom-teams.py
-```
 
 ## Verify
 Trigger an alert in Wazuh and validate you're receiving them in Teams.
