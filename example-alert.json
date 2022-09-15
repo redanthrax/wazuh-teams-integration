@@ -1,0 +1,53 @@
+{
+   "timestamp":"2022-09-15T02:09:35.910+0000",
+   "rule":{
+      "level":3,
+      "description":"Software protection service scheduled successfully.",
+      "id":"60642",
+      "firedtimes":1,
+      "mail":false,
+      "groups":[
+         "windows",
+         "windows_application"
+      ]
+   },
+   "agent":{
+      "id":"001",
+      "name":"vagrantvm",
+      "ip":"192.168.121.4"
+   },
+   "manager":{
+      "name":"wazuh"
+   },
+   "id":"1663207775.226293",
+   "decoder":{
+      "name":"windows_eventchannel"
+   },
+   "data":{
+      "win":{
+         "system":{
+            "providerName":"Microsoft-Windows-Security-SPP",
+            "providerGuid":"{E23B33B0-C8C9-472C-A5F9-F2BDFEA0F156}",
+            "eventSourceName":"Software Protection Platform Service",
+            "eventID":"16384",
+            "version":"0",
+            "level":"4",
+            "task":"0",
+            "opcode":"0",
+            "keywords":"0x80000000000000",
+            "systemTime":"2022-09-15T02:09:35.8894421Z",
+            "eventRecordID":"440",
+            "processID":"0",
+            "threadID":"0",
+            "channel":"Application",
+            "computer":"vagrantvm",
+            "severityValue":"INFORMATION",
+            "message":"\"Successfully scheduled Software Protection service for re-start at 2022-11-13T21:41:35Z. Reason: RulesEngine.\""
+         },
+         "eventdata":{
+            "data":"2022-11-13T21:41:35Z, RulesEngine"
+         }
+      }
+   },
+   "location":"EventChannel"
+}
