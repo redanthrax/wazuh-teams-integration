@@ -1,0 +1,1 @@
+# wazuh-teams-integration
