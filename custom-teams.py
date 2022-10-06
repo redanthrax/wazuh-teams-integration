@@ -95,6 +95,10 @@ payload = {
                         "type": "FactSet",
                         "facts": [
                             {
+                                "title": "Alert ID",
+                                "value": alert["id"]
+                            },
+                            {
                                 "title": "Timestamp",
                                 "value": alert["timestamp"]
                             },
